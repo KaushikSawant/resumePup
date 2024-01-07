@@ -1,0 +1,32 @@
+.pic{
+  border-radius: 50%;
+  height: 240px;
+}
+.center{
+  text-align: center;
+}
+.eLogo{
+  height: 60px;
+  width: 100px;
+}
+.bgAbout{
+  background-color: #f9f7f7;
+}
+
+.bgProject{
+  background-color: #dbe2ef;
+  transition: transform .2s;
+
+}
+.bgProject:hover{
+  transform: scale(1.02);
+}
+h3{
+  color: #3f72af;
+}
+h5{
+  color:#112d4e;
+}
+.mastercard{
+  height: 60px
+}
