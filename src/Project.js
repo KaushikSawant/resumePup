@@ -17,7 +17,7 @@ function Project(){
                 </div>
                 <div className="card-body">
                     
-                    <h4>Ugam Solutions<img src = {`https://www.ugamsolutions.com/Content/images/logo.png`} className="mastercard" /></h4>
+                    <h4>Ugam Solutions a Merkle Company<img src = {`https://www.ugamsolutions.com/Content/images/logo.png`} className="mastercard" /></h4>
                     <p>
                     Working as AEM(Adobe Experience Manager) Developer, My day to day responsibilites were creating User Interface, Components and Models with HTML, CSS, and JavaScript to create visually appealing and interactive Web Applications.
 And testing the product before deploying it to Production environment</p>
