@@ -27,7 +27,7 @@ function Hobbies() {
             <div className="col-12 col-md-8 card bgProject">
                 <div>
                     <h3>Interests:</h3>
-                    <p className="api"><FcSportsMode size="2em" />I love playing Football and {city}.</p>
+                    <p className="api"><FcSportsMode size="2em" />I love playing Football and Basketball{city}.</p>
                 </div>
             </div>
         </div>

@@ -6,7 +6,6 @@ import Education from './Education';
 import Skills from './Skills';
 import Certifications from './Certifications';
 import Project from './Project';
-import Extra from './Extra';
 import Hobbies from './Hobbies';
 
 function Home(){
@@ -17,7 +16,6 @@ function Home(){
         <Skills />
         <Project />
         <Certifications />
-        <Extra />
         <Hobbies />
     </div>
     )
