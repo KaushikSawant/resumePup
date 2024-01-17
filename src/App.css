@@ -1,32 +1,31 @@
-.pic{
+.pic {
   border-radius: 50%;
   height: 240px;
 }
-.center{
+.center {
   text-align: center;
 }
-.eLogo{
+.eLogo {
   height: 60px;
   width: 100px;
 }
-.bgAbout{
+.bgAbout {
   background-color: #f9f7f7;
 }
 
-.bgProject{
+.bgProject {
   background-color: #dbe2ef;
-  transition: transform .2s;
-
+  transition: transform 0.2s;
 }
-.bgProject:hover{
+.bgProject:hover {
   transform: scale(1.02);
 }
-h3{
+h3 {
   color: #3f72af;
 }
-h5{
-  color:#112d4e;
+h5 {
+  color: #112d4e;
 }
-.mastercard{
-  height: 60px
+.mastercard {
+  height: 60px;
 }
