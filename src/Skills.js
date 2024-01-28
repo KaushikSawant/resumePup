@@ -61,6 +61,10 @@ function Skills() {
                 <SiPuppeteer size="2em" color="#0074a3" />
                 Jenkins
               </th>
+              <th>
+                <SiPuppeteer size="2em" color="#0074a3" />
+                Delete
+              </th>
             </tr>
           </thead>
         </table>
