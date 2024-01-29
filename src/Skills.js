@@ -59,7 +59,7 @@ function Skills() {
               </th>
               <th>
                 <SiPuppeteer size="2em" color="#0074a3" />
-                Jenkins
+                Jenkins1
               </th>
             </tr>
           </thead>
