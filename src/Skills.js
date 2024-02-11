@@ -1,6 +1,6 @@
 import React from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import { FaJava, FaDatabase, FaNodeJs } from "react-icons/fa";
+import { FaJava, FaDatabase, FaNodeJs, FaJenkins } from "react-icons/fa";
 import { GrReactjs } from "react-icons/gr";
 //import {SiPostman} from "react-icons/si"
 import { BsGit } from "react-icons/bs";
@@ -58,8 +58,8 @@ function Skills() {
                 Puppeteer
               </th>
               <th>
-                <SiPuppeteer size="2em" color="#0074a3" />
-                Jenkins1
+                <FaJenkins size="2em" />
+                Jenkins
               </th>
             </tr>
           </thead>

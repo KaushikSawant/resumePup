@@ -8,8 +8,7 @@ function Project() {
         <div className="card-body">
           <h3>Work Experience</h3>
           <h4>
-            Finicity a Mastercard Company{" "}
-            <img src={img.ma} className="mastercard" />
+            Finicity a Mastercard Company
           </h4>
           <p>
             As a Software Engineer, I played a pivotal role in the Open Banking
@@ -27,10 +26,6 @@ function Project() {
         <div className="card-body">
           <h4>
             Ugam Solutions a Merkle Company
-            <img
-              src={`https://www.ugamsolutions.com/Content/images/logo.png`}
-              className="mastercard"
-            />
           </h4>
           <p>
             Working as AEM(Adobe Experience Manager) Developer, My day to day
