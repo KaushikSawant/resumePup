@@ -12,10 +12,10 @@ function Home(){
     return(
     <div className = "container mt-4 mb-5 bgAbout">
         <Aboutme />
-        <Education />
         <Skills />
         <Project />
         <Certifications />
+        <Education />
         <Hobbies />
     </div>
     )

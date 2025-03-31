@@ -1,4 +1,6 @@
 import image from "./Images/myPhoto.jpg";
+import { HiOutlineMail } from "react-icons/hi";
+import { FaPhoneAlt } from "react-icons/fa";
 const React = require("react");
 
 const img = { profile: image };
@@ -13,7 +15,13 @@ function Aboutme() {
   return (
     <div className="row">
       <div className="col-12 col-md-4 center">
-        <img src={img.profile} className="pic" />
+        <img src={img.profile} className="pic" /><br/>
+        Kaushik Sawant
+          <br />
+          <HiOutlineMail /> kaushiksawant567@gmail.com
+          <br />
+          <FaPhoneAlt /> +91 9892245473
+          <br />
       </div>
       <div className="col-12 col-md-8 card bgProject">
         <h3>About Me:</h3>
