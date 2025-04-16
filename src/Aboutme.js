@@ -15,13 +15,14 @@ function Aboutme() {
   return (
     <div className="row">
       <div className="col-12 col-md-4 center">
-        <img src={img.profile} className="pic" /><br/>
+        <img src={img.profile} className="pic" />
+        <br />
         Kaushik Sawant
-          <br />
-          <HiOutlineMail /> kaushiksawant567@gmail.com
-          <br />
-          <FaPhoneAlt /> +91 9892245473
-          <br />
+        <br />
+        <HiOutlineMail /> kaushiksawant567@gmail.com
+        <br />
+        <FaPhoneAlt /> +91 9892245473
+        <br />
       </div>
       <div className="col-12 col-md-8 card bgProject">
         <h3>About Me:</h3>
