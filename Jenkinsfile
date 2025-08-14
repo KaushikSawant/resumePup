@@ -8,47 +8,40 @@ pipeline {
             }
         }
 
-        stage('Install Node.js Locally') {
-    steps {
-        sh '''
-            # Install nvm (Node Version Manager) if not installed
-            if [ ! -d "$HOME/.nvm" ]; then
-                curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-            fi
+        stage('Install NVM if Missing') {
+            steps {
+                sh """
+                    export NVM_DIR="\$HOME/.nvm"
+                    if [ ! -d "\$NVM_DIR" ]; then
+                        echo "NVM not found, installing..."
+                        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+                    else
+                        echo "NVM already installed."
+                    fi
+                """
+            }
+        }
 
-            # Load nvm into this shell session
-            export NVM_DIR="$HOME/.nvm"
-            [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
-            # Install Node.js LTS version
-            nvm install --lts
-            nvm use --lts
-
-            # Verify installation
-            node -v
-            npm -v
-        '''
-    }
-}
-
+        stage('Setup Node via NVM') {
+            steps {
+                sh """
+                    export NVM_DIR="\$HOME/.nvm"
+                    [ -s "\$NVM_DIR/nvm.sh" ] && . "\$NVM_DIR/nvm.sh"
+                    nvm install 18
+                    nvm use 18
+                """
+            }
+        }
 
         stage('Install Dependencies') {
             steps {
-                sh '''
-                    export NVM_DIR="$HOME/.nvm"
-                    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-                    npm install
-                '''
+                sh 'npm install'
             }
         }
 
         stage('Build React App') {
             steps {
-                sh '''
-                    export NVM_DIR="$HOME/.nvm"
-                    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-                    npm run build
-                '''
+                sh 'npm run build'
             }
         }
 
