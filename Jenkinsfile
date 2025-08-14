@@ -9,27 +9,28 @@ pipeline {
         }
 
         stage('Install Node.js Locally') {
-            steps {
-                sh '''
-                    # Install nvm (Node Version Manager) if not installed
-                    if [ ! -d "$HOME/.nvm" ]; then
-                        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-                    fi
+    steps {
+        sh '''
+            # Install nvm (Node Version Manager) if not installed
+            if [ ! -d "$HOME/.nvm" ]; then
+                curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+            fi
 
-                    # Load nvm into this shell session
-                    export NVM_DIR="$HOME/.nvm"
-                    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            # Load nvm into this shell session
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
-                    # Install Node.js LTS version
-                    nvm install --lts
-                    nvm use --lts
+            # Install Node.js LTS version
+            nvm install --lts
+            nvm use --lts
 
-                    # Verify installation
-                    node -v
-                    npm -v
-                '''
-            }
-        }
+            # Verify installation
+            node -v
+            npm -v
+        '''
+    }
+}
+
 
         stage('Install Dependencies') {
             steps {
