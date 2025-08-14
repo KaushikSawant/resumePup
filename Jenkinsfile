@@ -1,11 +1,6 @@
 pipeline {
     agent any
 
-    environment {
-        NODEJS_HOME = tool name: 'nodejs', type: 'NodeJSInstallation'
-        PATH = "${NODEJS_HOME}/bin:${env.PATH}"
-    }
-
     stages {
         stage('Checkout Code') {
             steps {
@@ -13,15 +8,46 @@ pipeline {
             }
         }
 
+        stage('Install Node.js Locally') {
+            steps {
+                sh '''
+                    # Install nvm (Node Version Manager) if not installed
+                    if [ ! -d "$HOME/.nvm" ]; then
+                        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+                    fi
+
+                    # Load nvm into this shell session
+                    export NVM_DIR="$HOME/.nvm"
+                    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+                    # Install Node.js LTS version
+                    nvm install --lts
+                    nvm use --lts
+
+                    # Verify installation
+                    node -v
+                    npm -v
+                '''
+            }
+        }
+
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                sh '''
+                    export NVM_DIR="$HOME/.nvm"
+                    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+                    npm install
+                '''
             }
         }
 
         stage('Build React App') {
             steps {
-                sh 'npm run build'
+                sh '''
+                    export NVM_DIR="$HOME/.nvm"
+                    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+                    npm run build
+                '''
             }
         }
 
