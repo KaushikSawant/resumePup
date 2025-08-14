@@ -7,9 +7,7 @@ function Project() {
       <div className="col-12 col-md-8 card bgProject">
         <div className="card-body">
           <h3>Work Experience</h3>
-          <h4>
-            Finicity a Mastercard Company
-          </h4>
+          <h4>Finicity a Mastercard Company</h4>
           <p>
             As a Software Engineer, I played a pivotal role in the Open Banking
             division, where my responsibilities included writing highly
@@ -24,9 +22,7 @@ function Project() {
           </p>
         </div>
         <div className="card-body">
-          <h4>
-            Ugam Solutions a Merkle Company
-          </h4>
+          <h4>Ugam Solutions a Merkle Company</h4>
           <p>
             Working as AEM(Adobe Experience Manager) Developer, My day to day
             responsibilites were creating User Interface, Components and Models

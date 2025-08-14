@@ -21,7 +21,8 @@
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -44,11 +45,18 @@
   "devDependencies": {
     "eslint": "^7.32.0",
     "husky": "^8.0.3",
+    "lint-staged": "^15.5.1",
+    "prettier": "^3.5.3",
     "sonar-scanner": "^3.1.0"
   },
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint && sonar-scanner"
     }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,md}": [
+      "prettier --write"
+    ]
   }
 }
